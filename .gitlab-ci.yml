@@ -1,0 +1,15 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  environment:
+    name: production
+    url: https://riddhishk.netlify.app/
+  only:
+    - master
+  script:
+    - npm i
+    # your build command
+    - npm run build
+    - npx netlify-cli deploy --site 3b1767bd-a717-466c-a9d1-a95ae0bcd24d --auth e2d516c2376704b6cddddfd2864056882bfc977166143add9d1dd68a250dca9e --prod
