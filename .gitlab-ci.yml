@@ -5,7 +5,7 @@ deploy:
   stage: deploy
   environment:
     name: production
-    url: https://riddhishk.netlify.app/
+    url: https://riddhishk.netlify.app
   only:
     - master
   script:
