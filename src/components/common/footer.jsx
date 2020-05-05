@@ -1,9 +1,8 @@
-/* eslint-disable import/no-unresolved */
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../../images/logo.png';
-import brand from '../../images/brand.png';
-import kovas from '../../images/Kova.png';
+// import brand from '../../images/branding.png';
+// import kovas from '../../images/Kovaing.png';
 
 const Wrapper = styled.section`
   background: #333;
@@ -57,14 +56,14 @@ const Index = () => (
           <MiniHeading>
             Our Brands
           </MiniHeading>
-          <ImageWraper
+          {/* <ImageWraper
             src={brand}
             className="img-fluid"
           />
           <ImageWraper
             src={kovas}
             className="img-fluid"
-          />
+          /> */}
         </div>
       </div>
       <hr className="bg-white" />
