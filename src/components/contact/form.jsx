@@ -1,37 +1,36 @@
 import React from 'react';
 
 const Index = () => (
-  <form name="contact" method="POST" data-netlify="true">
-    <p>
-      <label htmlFor="firstname">
-        Your Name:
-        <input type="text" name="name" />
+  <form
+    name="contact"
+    method="post"
+    action="/success"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+  >
+    <input type="hidden" name="bot-field" />
+    <div>
+      <label htmlFor="name">
+        Name
+        <input type="text" name="name" id="name" />
       </label>
-    </p>
-    <p>
+    </div>
+    <div>
       <label htmlFor="email">
-        Your Email:
-        <input type="email" name="email" />
+        Email
+        <input type="text" name="email" id="email" />
       </label>
-    </p>
-    <p>
-      <label htmlFor="firstname">
-        Your Role:
-        <select name="role[]" multiple>
-          <option value="leader">Leader</option>
-          <option value="follower">Follower</option>
-        </select>
+    </div>
+    <div>
+      <label htmlFor="message">
+        Message
+        <textarea name="message" id="message" rows="6" required />
       </label>
-    </p>
-    <p>
-      <label htmlFor="firstname">
-        Message:
-        <textarea name="message" />
-      </label>
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
+    </div>
+    <div>
+      <input type="submit" value="Drop a line" />
+      <input type="reset" value="Eraser" />
+    </div>
   </form>
 );
 
