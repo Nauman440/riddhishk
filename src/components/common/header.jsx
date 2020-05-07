@@ -1,42 +1,26 @@
 import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
+const Header = () => (
+  <nav className="navbar navbar-expand-lg navbar-light bg-white">
+    <Link className="navbar-brand" to="/">Navbar</Link>
+    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon" />
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div className="navbar-nav">
+        <Link className="nav-item nav-link active" to="/">
+          Home
+          {' '}
+          <span className="sr-only">(current)</span>
         </Link>
-      </h1>
+        <Link className="nav-item nav-link" to="/about">Features</Link>
+        <Link className="nav-item nav-link" to="/">Contact</Link>
+        <Link className="nav-item nav-link " to="/">Disabled</Link>
+      </div>
     </div>
-  </header>
+  </nav>
 );
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: '',
-};
 
 export default Header;

@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Map from '../../images/map.png';
+
 
 const Wrapper = styled.section`
   margin:130px 5px;
@@ -13,6 +15,9 @@ font-size: 64px !important;
 const Paragraph = styled.p`
 line-height:32px !important;
 font-size:25px !important;
+`;
+
+const ImageConatiner = styled.img`
 `;
 
 const Index = () => (
@@ -32,6 +37,11 @@ const Index = () => (
             services. Scroll below for
             local office contact information.
           </Paragraph>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-12">
+          <ImageConatiner src={Map} alt="map image" className="img-fluid mt-5 mx-auto d-block" />
         </div>
       </div>
     </div>

@@ -12,6 +12,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from '../../theme';
 import { GlobalStyles } from '../../globalStyle';
 import Footer from './footer';
+import Header from './header';
 
 const Layout = ({ children }) => (
   <>
@@ -23,7 +24,7 @@ const Layout = ({ children }) => (
 
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      {/* <Header /> */}
+      <Header />
       <main>{children}</main>
       <Footer />
     </ThemeProvider>
